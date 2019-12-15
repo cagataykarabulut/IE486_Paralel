@@ -15,6 +15,7 @@ namespace FLOW.NET.Operational
         private AlgorithmCollection algorithms; //state
         private EventCalendar eventCalendar; //state
         private JobManager jobManager; //state
+        private OrderManager orderManager; //IE486 Fall19
         private LayoutManager layoutManager; //state
         private SimulationParameter parameter;
         private double startTime; //state
@@ -28,6 +29,7 @@ namespace FLOW.NET.Operational
             this.eventCalendar = new EventCalendar(this);
             this.layoutManager = new LayoutManager("LayoutManager", this);
             this.jobManager = new JobManager("JobManager", this);
+            this.orderManager = new OrderManager("OrderManager", this);//IE486 Fall19
         }
 
         #region GETSET functions
@@ -47,6 +49,13 @@ namespace FLOW.NET.Operational
         {
             get { return this.jobManager; }
             set { this.jobManager = value; }
+        }
+
+        //IE486 Fall19
+        public OrderManager OrderManager
+        {
+            get { return this.orderManager; }
+            set { this.orderManager = value; }
         }
 
         public LayoutManager LayoutManager

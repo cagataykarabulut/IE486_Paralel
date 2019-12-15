@@ -46,6 +46,25 @@ namespace FLOW.NET
         }
     }
 
+    //IE486 Fall19
+    public class TransporterList : List<Transporter>
+    {
+        public Transporter this[string name]
+        {
+            get
+            {
+                foreach (Transporter transporter in this)
+                {
+                    if (transporter.Name == name)
+                    {
+                        return transporter;
+                    }
+                }
+                return null;
+            }
+        }
+    }
+
     public class CellStateList : List<CellState>
     {
     }

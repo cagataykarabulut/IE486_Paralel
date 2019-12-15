@@ -19,6 +19,10 @@ namespace FLOW.NET.Layout
         private Node parkNode; //Park Node number is assumed to be 1 for Fall19
         private NodeList serviceNodes;
         private double speed;
+        private bool onRoad;
+        private List<TransferTask> assignedTask;
+        private Supermarket assignedStorage;
+        //private Node location;
         // IE 486 Fall 19
         //private StorageList storages;
         private NodeList route;
@@ -34,7 +38,7 @@ namespace FLOW.NET.Layout
             this.CreateStatistics();
         }
 
-        public Transporter (string nameIn, FLOWObject parentIn)
+        public Transporter(string nameIn, FLOWObject parentIn)
             : base(nameIn, parentIn)
         {
             this.CreateStatistics();
@@ -59,14 +63,6 @@ namespace FLOW.NET.Layout
         //    get { return this.travelTime; }
         //    set { this.travelTime = value; }
         //}
-
-
-        [XmlIgnore()]
-        public NodeList Route
-        {
-            get { return this.route; }
-            set { this.route = value; }
-        }
 
         //Fall19
         [XmlElement("Capacity")]
@@ -93,6 +89,33 @@ namespace FLOW.NET.Layout
             get { return this.speed; }
             set { this.speed = value; }
         }
+        [XmlIgnore()]
+        public NodeList Route
+        {
+            get { return this.route; }
+            set { this.route = value; }
+        }
+
+        [XmlIgnore()]
+        public bool OnRoad
+        {
+            get { return this.onRoad; }
+            set { this.onRoad = value; }
+        }
+
+        [XmlIgnore()]
+        public List<TransferTask> AssignedTask
+        {
+            get { return this.assignedTask; }
+            set { this.assignedTask = value; }
+        }
+
+        [XmlIgnore()]
+        public Supermarket AssignedStorage
+        {
+            get { return this.assignedStorage; }
+            set { this.assignedStorage = value; }
+        }
 
         //Fall19
 
@@ -108,12 +131,12 @@ namespace FLOW.NET.Layout
             {
                 Statistics busy = this.Statistics["Busy"];
                 busy.UpdateWeighted(timeIn, 0);
-            }            
+            }
         }
 
         public void Receive(double timeIn, Bin binIn)
         {
-            binIn.ChangeLocation(timeIn,this);
+            binIn.ChangeLocation(timeIn, this);
             this.content.Add(binIn);
             Statistics busy = this.Statistics["Busy"]; //for bypass
             busy.UpdateWeighted(timeIn, 1);
@@ -125,14 +148,14 @@ namespace FLOW.NET.Layout
             Statistics load = this.Statistics["Load"];
             load.Clear(timeIn, this.Content.Count);
             Statistics busy = this.Statistics["Busy"];
-            if (this.content.Count !=0) // for bypass
+            if (this.content.Count != 0) // for bypass
             {
                 busy.Clear(timeIn, 1);
             }
             else
             {
                 busy.Clear(timeIn, 0);
-            }          
+            }
         }
 
         public void CreateStatistics()
@@ -145,9 +168,38 @@ namespace FLOW.NET.Layout
         {
             Statistics load = this.Statistics["Load"];
             load.UpdateWeighted(timeIn, this.content.Count);
-            Statistics busy= this.Statistics["Busy"];
+            Statistics busy = this.Statistics["Busy"];
             busy.UpdateWeighted(timeIn, this.content.Count);
         }
+
+
+        //Fall 19
+        public bool isReadyAtDock()
+        {
+            if (this.InTransfer == false & this.assignedStorage.Node == this.Location) { return true; }
+            else { return false; }
+        }
+
+        public void CreateRoute()
+        {
+
+        }
+
+        public double calculateTransferTime()
+        {
+            return 5;
+        }
+        public double calculateTravelTime()
+        {
+            return 5;
+        }
+
+        public double AvailableCapacity()
+        {
+            return (content.Count - this.capacity);
+        }
+        //Fall 19
+
 
     }
 }

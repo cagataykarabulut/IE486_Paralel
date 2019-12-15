@@ -109,6 +109,7 @@
     <Compile Include="Operational\AlgorithmCollection.cs" />
     <Compile Include="Operational\AlgorithmParameter.cs" />
     <Compile Include="Operational\BatchRun.cs" />
+    <Compile Include="Operational\OrderManager.cs" />
     <Compile Include="Operational\ConfigurationParameter.cs" />
     <Compile Include="Operational\EventCalendar.cs" />
     <Compile Include="Operational\Events\ArrivalEvent.cs" />
