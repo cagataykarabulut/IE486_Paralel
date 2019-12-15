@@ -65,6 +65,31 @@ namespace FLOW.NET
         }
     }
 
+    //IE486 Fall19
+    public class TransferTaskList : List<TransferTask>
+    {
+    }
+
+    //IE486 Fall19
+    public class SupermarketList : List<Supermarket>
+    {
+        public Supermarket this[string name]
+        {
+            get
+            {
+                foreach (Supermarket supermarket in this)
+                {
+                    if (supermarket.Name == name)
+                    {
+                        return supermarket;
+                    }
+                }
+                return null;
+            }
+        }
+    }
+
+
     public class CellStateList : List<CellState>
     {
     }
@@ -98,9 +123,6 @@ namespace FLOW.NET
     {
     }
     public class OrderList : List<Order>
-    {
-    }
-    public class TransferTaskList : List<TransferTask>
     {
     }
     public class EventStateList : List<EventState>

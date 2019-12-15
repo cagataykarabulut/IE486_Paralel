@@ -46,7 +46,7 @@ namespace FLOW.NET.Operational.Events
                 transporter.Receive(this.Time, bin);
                 bin.InTransfer = false;
             }
-            if (transporter.Content.Count() != transporter.Capacity)
+            if (transporter.Content.Count != transporter.Capacity)
             {
                 this.Manager.EventCalendar.ScheduleEndLoadEvent(this.Time, transporter);
                 Statistics readyTransporterAtDockCount = transporter.Location.Statistics["readyTranporterAtDockCount"];

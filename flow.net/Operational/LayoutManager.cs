@@ -15,6 +15,7 @@ namespace FLOW.NET.Operational
         private OrderList ordersToReplenish; // IE486 Fall18
 
         private StationList stationsToDecide; //state
+        private SupermarketList supermarketsToDecide; //state IE486 Fall19
 
         private Layout.Layout layout; //state
 
@@ -31,6 +32,13 @@ namespace FLOW.NET.Operational
         {
             get { return this.stationsToDecide; }
             set { this.stationsToDecide = value; }
+        }
+
+        //IE486 Fall19
+        public SupermarketList SupermarketsToDecide
+        {
+            get { return this.supermarketsToDecide; }
+            set { this.supermarketsToDecide = value; }
         }
 
         public NodeList CongestedNodes

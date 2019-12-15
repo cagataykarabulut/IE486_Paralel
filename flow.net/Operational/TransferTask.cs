@@ -1,17 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+// Are these needed?
 using FLOW.NET.Layout;
 
-
-namespace FLOW.NET
+namespace FLOW.NET.Operational
 {
-    public class TransferTask
+    public class TransferTask : FLOWObject
     {
         private BinList listOfBin;
-        private Storage location;
+        private Supermarket location;
         private double issueTime;
         private double boardingTime;
 
@@ -22,7 +22,7 @@ namespace FLOW.NET
             get { return this.listOfBin; }
             set { this.listOfBin = value; }
         }
-        public Storage Location
+        public Supermarket Location
         {
             get { return this.location; }
             set { this.location = value; }
@@ -35,8 +35,10 @@ namespace FLOW.NET
         public double BoardingTime
         {
             get { return this.boardingTime; }
-            set { this.boardingTime = value; }
+            set
+            {
+                this.boardingTime = value;
+            }
         }
-
     }
 }

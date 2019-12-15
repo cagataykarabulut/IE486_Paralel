@@ -474,9 +474,13 @@ namespace FLOW.NET.Operational
             this.LayoutManager.OrdersToReplenish.Add(orderIn);
         }
 
+        //IE486 Fall 19
         public void TriggerSupermarketControllerAlgorithm(Supermarket supermarketIn)
         {
-            return;
+            if (this.layoutManager.SupermarketsToDecide.Contains(supermarketIn) == false)
+            {
+                this.layoutManager.SupermarketsToDecide.Add(supermarketIn);
+            }
         }
     }
 

@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{603AAB09-A314-4170-9A20-66CFB1A935A6}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FLOW.NET" expanded="True">
+            <Node name="FLOW.NET" expanded="True">
+              <Node name="Decision" expanded="True">
+                <Node name="Matching" expanded="True" />
+                <Node name="PrepareTransferTask" expanded="True">
+                  <Node name="NoBatching.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Layout" expanded="True" />
+              <Node name="Operational" expanded="True">
+                <Node name="Events" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Wrapper" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Wrapper PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

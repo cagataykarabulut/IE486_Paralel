@@ -158,7 +158,8 @@
     <Compile Include="SQParameter.cs" />
     <Compile Include="StaticObject.cs" />
     <Compile Include="Statistics.cs" />
-    <Compile Include="TransferTask.cs" />
+    <Compile Include="Operational\TransferTask.cs" />
+    <Compile Include="Layout\TransporterQueue.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

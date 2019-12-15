@@ -13,8 +13,18 @@ namespace FLOW.NET.Layout
     {
         //ie486f18
         private RVGenerator loadTime;
-
         private RVGenerator unloadTime;
+
+        //IE486 Fall19
+        private TransporterList listOfReadyTransportersAtDock;
+
+        [XmlIgnore]
+        public TransporterList ListOfReadyTransportersAtDock
+        {
+            get { return this.listOfReadyTransportersAtDock; }
+            set { this.listOfReadyTransportersAtDock = value; }
+        }
+
 
         [XmlElement("UnloadTime", typeof(RVGenerator))]
         public RVGenerator UnloadTime

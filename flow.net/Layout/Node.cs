@@ -24,6 +24,7 @@ namespace FLOW.NET.Layout
         //private LaneList ending;
 
         private Queue inQueue;
+        private TransporterQueue transporterInQueue; //IE486Fall19
 
         private System.Drawing.Point location;
 

@@ -84,11 +84,13 @@ namespace FLOW.NET.Operational
             this.ScheduleEvent(endPlanningPeriodEvent);
         }
 
+        //IE486 Fall19:
         public void ScheduleSeizeNodeEvent(double timeIn, Transporter transporterIn)
         {
             SeizeNodeEvent seizeNodeEvent = new SeizeNodeEvent(timeIn, this.manager, transporterIn);
             this.ScheduleEvent(seizeNodeEvent);
         }
+
         public void ScheduleEndLoadEvent(double timeIn, Transporter transporterIn)
         {
             EndLoadEvent endLoadEvent = new EndLoadEvent(timeIn, this.manager, transporterIn);
@@ -109,6 +111,8 @@ namespace FLOW.NET.Operational
             EndPickEvent endPickEvent = new EndPickEvent(timeIn, this.manager, binIn);
             this.ScheduleEvent(endPickEvent);
         }
+        //IE486 Fall19
+
 
         public void ScheduleEndProcessEvent(double timeIn, Processor processorIn)
         {

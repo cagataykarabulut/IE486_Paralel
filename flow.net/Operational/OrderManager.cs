@@ -11,10 +11,13 @@ namespace FLOW.NET.Operational
     public class OrderManager : FLOWObject
     {
         private TransporterList transportersToMatch;
-        public OrderManager(string nameIn, FLOWObject parentIn)
-            :base(nameIn, parentIn)
-        {
+        private TransferTaskList transferTasksToMatch;
 
+        public OrderManager(string nameIn, FLOWObject parentIn)
+            : base(nameIn, parentIn)
+        {
+            this.transferTasksToMatch = new TransferTaskList();
+            this.transportersToMatch = new TransporterList();
         }
 
         public TransporterList TransportersToMatch
@@ -23,5 +26,10 @@ namespace FLOW.NET.Operational
             set { this.transportersToMatch = value; }
         }
 
+        public TransferTaskList TransferTasksToMatch
+        {
+            get { return this.transferTasksToMatch; }
+            set { this.transferTasksToMatch = value; }
+        }
     }
 }

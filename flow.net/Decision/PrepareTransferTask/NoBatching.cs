@@ -11,19 +11,19 @@ namespace FLOW.NET.Decision.PrepareTransferTask
 {
     public class NoBatching : PrepareTransferTaskAlgorithm
     {
-        protected override void CreateNewTasks(BinList binListIn)
+        protected override TransferTaskList CreateNewTasks(BinList binListIn)
         {
-            TransferTaskList newTransferTask = new TransferTaskList();
+            TransferTaskList newTransferTasks = new TransferTaskList();
 
             foreach (Bin bin in binListIn)
             {
-                newTransferTask.Add(bin);
+                newTransferTasks.Add(bin);
             }
 
             readyBinCount.UpdateWeighted(this.Manager.Time, binListIn.Count); //StatisticsUpdate
-            transferTaskCount.UpdateWeighted(this.Manager.Time, newTransferTask.Count); //StatisticsUpdate
+            transferTaskCount.UpdateWeighted(this.Manager.Time, newTransferTasks.Count); //StatisticsUpdate
 
-            delete binListIn;
+            return 
 
         }
     }

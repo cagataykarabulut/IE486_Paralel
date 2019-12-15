@@ -1,9 +1,10 @@
-C:\Users\cagatay\Downloads\FLOW.NET 09.10.2019\FLOW.NET 09.10.2019\FLOW.NET\bin\Debug\FLOW.NET.dll
-C:\Users\cagatay\Downloads\FLOW.NET 09.10.2019\FLOW.NET 09.10.2019\FLOW.NET\bin\Debug\FLOW.NET.pdb
-C:\Users\cagatay\Downloads\FLOW.NET 09.10.2019\FLOW.NET 09.10.2019\FLOW.NET\obj\Debug\FLOW.NET.csprojAssemblyReference.cache
-C:\Users\cagatay\Downloads\FLOW.NET 09.10.2019\FLOW.NET 09.10.2019\FLOW.NET\obj\Debug\FLOW.NET.dll
-C:\Users\cagatay\Downloads\FLOW.NET 09.10.2019\FLOW.NET 09.10.2019\FLOW.NET\obj\Debug\FLOW.NET.pdb
-C:\Users\cagatay\Desktop\FLOW.NET 09.10.2019\FLOW.NET 09.10.2019\FLOW.NET\obj\Debug\FLOW.NET.csprojAssemblyReference.cache
-C:\Users\cagatay\Desktop\FLOW.NET 09.10.2019\FLOW.NET 09.10.2019\FLOW.NET\obj\Debug\FLOW.NET.dll
-C:\Users\cagatay\Desktop\FLOW.NET 09.10.2019\FLOW.NET 09.10.2019\FLOW.NET\obj\Debug\FLOW.NET.pdb
-C:\Users\asus\Documents\GitHub\IE486_Paralel\FLOW.NET\obj\Debug\FLOW.NET.csprojAssemblyReference.cache
+C:/Users/cagatay/Downloads/FLOW.NET 09.10.2019/FLOW.NET 09.10.2019/FLOW.NET/bin/Debug/FLOW.NET.dll
+C:/Users/cagatay/Downloads/FLOW.NET 09.10.2019/FLOW.NET 09.10.2019/FLOW.NET/bin/Debug/FLOW.NET.pdb
+C:/Users/cagatay/Downloads/FLOW.NET 09.10.2019/FLOW.NET 09.10.2019/FLOW.NET/obj/Debug/FLOW.NET.csprojAssemblyReference.cache
+C:/Users/cagatay/Downloads/FLOW.NET 09.10.2019/FLOW.NET 09.10.2019/FLOW.NET/obj/Debug/FLOW.NET.dll
+C:/Users/cagatay/Downloads/FLOW.NET 09.10.2019/FLOW.NET 09.10.2019/FLOW.NET/obj/Debug/FLOW.NET.pdb
+C:/Users/cagatay/Desktop/FLOW.NET 09.10.2019/FLOW.NET 09.10.2019/FLOW.NET/obj/Debug/FLOW.NET.csprojAssemblyReference.cache
+C:/Users/cagatay/Desktop/FLOW.NET 09.10.2019/FLOW.NET 09.10.2019/FLOW.NET/obj/Debug/FLOW.NET.dll
+C:/Users/cagatay/Desktop/FLOW.NET 09.10.2019/FLOW.NET 09.10.2019/FLOW.NET/obj/Debug/FLOW.NET.pdb
+C:/Users/asus/Documents/GitHub/IE486_Paralel/FLOW.NET/obj/Debug/FLOW.NET.csprojAssemblyReference.cache
+/Users/alpereny/Documents/GitHub/IE486_Paralel/flow.net/obj/Debug/FLOW.NET.csprojAssemblyReference.cache
