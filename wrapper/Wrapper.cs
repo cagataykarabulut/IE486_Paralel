@@ -23,7 +23,8 @@ namespace Wrapper
             //1-Specify the xml files
             parameters.LayoutPath = "flow_layout.xml";
             parameters.JobPath = "flow_jobmix.xml";
-            parameters.Configuration.ToolPath = "flow_binloading.xml";
+            parameters.Configuration.BinPath = "flow_binloading.xml";
+            parameters.Configuration.OrderPath = "flow_order.xml";
             //parameters.Configuration.TracePath = Directory.GetCurrentDirectory() +  "\\Trace Files\\" + parameters.Seed + ".xml";
             // parameters.Configuration.TracePath = Directory.GetCurrentDirectory() + "\\Trace Files\\A100.xml";   //IE486f18
             parameters.Configuration.TracePath = Directory.GetCurrentDirectory() + "\\Trace Files\\Trace-B.xml";   //IE486f18
@@ -42,7 +43,7 @@ namespace Wrapper
             //3-Modify the algorithms as you desire 
             parameters.Algorithms.PartSequencingForProcessorAlgorithm = "FirstComeMustGo";
             parameters.Algorithms.StationControllerAlgorithm = "MixedProcessorConfiguration";
-            parameters.Algorithms.ReplenishmentControllerAlgorithm = "ByPassReplenish";
+            parameters.Algorithms.OrderControllerAlgorithm = ""; // eklenecek
             parameters.Algorithms.OrderReleaseAlgorithm = "CyclicalImmediate";
             parameters.Algorithms.StationSelectionAlgorithm = "SelectionOfFirstStation";
             parameters.Algorithms.PullAlgorithm = "FirstBlockedFirstServed";

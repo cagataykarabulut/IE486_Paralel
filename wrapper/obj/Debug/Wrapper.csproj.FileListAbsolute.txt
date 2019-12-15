@@ -16,3 +16,6 @@ C:\Users\cagatay\Desktop\FLOW.NET 09.10.2019\FLOW.NET 09.10.2019\Wrapper\obj\Deb
 C:\Users\cagatay\Desktop\FLOW.NET 09.10.2019\FLOW.NET 09.10.2019\Wrapper\obj\Debug\Wrapper.csproj.CopyComplete
 C:\Users\cagatay\Desktop\FLOW.NET 09.10.2019\FLOW.NET 09.10.2019\Wrapper\obj\Debug\Wrapper.exe
 C:\Users\cagatay\Desktop\FLOW.NET 09.10.2019\FLOW.NET 09.10.2019\Wrapper\obj\Debug\Wrapper.pdb
+C:\Users\IEUser\Desktop\IE486_Paralel-master\Wrapper\bin\Debug\Wrapper.exe.config
+C:\Users\IEUser\Desktop\IE486_Paralel-master\Wrapper\obj\Debug\Wrapper.exe
+C:\Users\IEUser\Desktop\IE486_Paralel-master\Wrapper\obj\Debug\Wrapper.pdb
