@@ -19,6 +19,10 @@ namespace FLOW.NET.Layout
         private Node parkNode; //Park Node number is assumed to be 1 for Fall19
         private NodeList serviceNodes;
         private double speed;
+        private bool onRoad;
+        private List<TransferTask> assignedTask;
+        private Supermarket assignedStorage;
+        //private Node location;
         // IE 486 Fall 19
         //private StorageList storages;
         private NodeList route;
@@ -60,14 +64,6 @@ namespace FLOW.NET.Layout
         //    set { this.travelTime = value; }
         //}
 
-
-        [XmlIgnore()]
-        public NodeList Route
-        {
-            get { return this.route; }
-            set { this.route = value; }
-        }
-
         //Fall19
         [XmlElement("Capacity")]
         public double Capacity
@@ -92,6 +88,12 @@ namespace FLOW.NET.Layout
         {
             get { return this.speed; }
             set { this.speed = value; }
+        }
+        [XmlIgnore()]
+        public NodeList Route
+        {
+            get { return this.route; }
+            set { this.route = value; }
         }
 
         //Fall19
