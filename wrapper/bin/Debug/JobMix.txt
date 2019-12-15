@@ -1,0 +1,160 @@
+SimulationManager
+JobManager
+   JobTypeA
+     JobTypeA-Alternate1
+        OperationRecA
+        Receiving
+        ProcessorABReceival
+        Fixed [1]
+        Operation1A
+        Station1
+        Processor1WS1
+        Uniform [8, 10]
+          ComponentType1
+          1
+          ComponentType2
+          8
+        Operation2A
+        Station2
+        Uniform [16, 20]
+          ComponentType3
+          2
+          ComponentType4
+          4
+        Operation3Ax
+        Station3
+        Uniform [26, 32]
+          ComponentType5
+          1
+        OperationShA
+        Shipping
+        Fixed [1]
+     JobTypeA-Alternate2
+        OperationRecA
+        Receiving
+        ProcessorABReceival
+        Fixed [1]
+        Operation1A
+        Station1
+        Processor1WS1
+        Uniform [8, 10]
+          ComponentType1
+          1
+          ComponentType2
+          8
+        Operation2A
+        Station2
+        Uniform [16, 20]
+          ComponentType3
+          2
+          ComponentType4
+          4
+        Operation3Ay
+        Station3
+        Processor1WS3
+        Fixed [29]
+          ComponentType6
+          1
+        OperationShA
+        Shipping
+        Fixed [1]
+   JobTypeB
+     JobTypeB-Alternate1
+        OperationRecB
+        Receiving
+        ProcessorABReceival
+        Fixed [1]
+        Operation1B
+        Station1
+        Processor2WS1
+        Uniform [8, 12]
+          ComponentType11
+          5
+          ComponentType12
+          2
+        Operation2B
+        Station2
+        Fixed [20]
+          ComponentType11
+          5
+          ComponentType13
+          5
+        Operation3Bx
+        Station3
+        Fixed [30]
+          ComponentType12
+          9
+        OperationShB
+        Shipping
+        Fixed [1]
+     JobTypeB-Alternate2
+        OperationRecB
+        Receiving
+        ProcessorABReceival
+        Fixed [1]
+        Operation1B
+        Station1
+        Processor2WS1
+        Uniform [8, 12]
+          ComponentType11
+          5
+          ComponentType12
+          2
+        Operation2B
+        Station2
+        Fixed [20]
+          ComponentType11
+          5
+          ComponentType13
+          5
+        Operation3By
+        Station3
+        Processor2WS3
+        Uniform [28, 34]
+          ComponentType14
+          11
+        OperationShB
+        Shipping
+        Fixed [1]
+   JobTypeC
+     JobTypeC-Alternate1
+        OperationRecC
+        Receiving
+        ProcessorCReceival
+        Fixed [1]
+        Operation2C
+        Station2
+        Uniform [2, 40]
+          ComponentType3
+          3
+          ComponentType4
+          3
+        Operation3Cx
+        Station3
+        Uniform [15, 45]
+          ComponentType5
+          11
+        OperationShC
+        Shipping
+        Fixed [1]
+     JobTypeC-Alternate2
+        OperationRecC
+        Receiving
+        ProcessorCReceival
+        Fixed [1]
+        Operation2C
+        Station2
+        Uniform [2, 40]
+          ComponentType3
+          3
+          ComponentType4
+          3
+        Operation3Cy
+        Station3
+        Processor3WS3
+        Fixed [25]
+          ComponentType6
+          9
+        OperationShC
+        Shipping
+        Fixed [1]

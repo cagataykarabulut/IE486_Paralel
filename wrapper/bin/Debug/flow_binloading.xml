@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<BinLoading xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>flow_binloading</Name>
+  <Stations>
+    <Station>
+      <Name>Station1</Name>
+      <BinMagazine>
+        <Name>Station1-BinMagazine</Name>
+		<Bins>
+		</Bins>
+      </BinMagazine>
+    </Station>
+	<Station>
+      <Name>Station2</Name>
+      <BinMagazine>
+        <Name>Station2-BinMagazine</Name>
+		<Bins>
+		</Bins>
+      </BinMagazine>
+    </Station>
+	<Station>
+      <Name>Station3</Name>
+      <BinMagazine>
+        <Name>Station3-BinMagazine</Name>
+		<Bins>
+		</Bins>
+      </BinMagazine>
+    </Station>
+  </Stations>
+</BinLoading>

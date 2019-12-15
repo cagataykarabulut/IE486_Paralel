@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EADBDBAA-9A52-481C-AEC2-F1370A5332C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FLOW.NET</RootNamespace>
+    <AssemblyName>FLOW.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\Dictionaries.cs" />
+    <Compile Include="Collections\Lists.cs" />
+    <Compile Include="Collections\ProcessorAndOperationCouples.cs" />
+    <Compile Include="Collections\PullDecision.cs" />
+    <Compile Include="Decision\BinCollector\GetBinsMinimumContent.cs" />
+    <Compile Include="Decision\BinCollectorAlgorithm.cs" />
+    <Compile Include="Decision\MatchingAlgorithm.cs" />
+    <Compile Include="Decision\Matching\NearestVehicle.cs" />
+    <Compile Include="Decision\Matching\Random.cs" />
+    <Compile Include="Decision\OrderControllerAlgorithm.cs" />
+    <Compile Include="Decision\OrderController\ByPassWarehouse.cs" />
+    <Compile Include="Decision\PrepareTransferTaskAlgorithm.cs" />
+    <Compile Include="Decision\PrepareTransferTask\NoBatching.cs" />
+    <Compile Include="Decision\StationControllerAlgorithm.cs" />
+    <Compile Include="Decision\StationController\MixedConfiguration.cs" />
+    <Compile Include="Decision\DecisionAlgorithm.cs" />
+    <Compile Include="Decision\OperationSelectionAlgorithm.cs" />
+    <Compile Include="Decision\OperationSelection\Random.cs" />
+    <Compile Include="Decision\OrderReleaseAlgorithm.cs" />
+    <Compile Include="Decision\OrderRelease\BlinkImmediate.cs" />
+    <Compile Include="Decision\OrderRelease\CyclicalImmediate.cs" />
+    <Compile Include="Decision\OrderRelease\Immediate.cs" />
+    <Compile Include="Decision\PartSequencingForProcessorAlgorithm.cs" />
+    <Compile Include="Decision\PartSequencingForProcessor\FirstComeMustGo.cs" />
+    <Compile Include="Decision\ProcessorSelectionAlgorithm.cs" />
+    <Compile Include="Decision\ProcessorSelection\NonDelaySPT.cs" />
+    <Compile Include="Decision\PullAlgorithm.cs" />
+    <Compile Include="Decision\Pull\FirstBlockedFirstServed.cs" />
+    <Compile Include="Decision\PushAlgorithm.cs" />
+    <Compile Include="Decision\Push\AlwaysPush.cs" />
+    <Compile Include="Decision\StationSelectionAlgorithm.cs" />
+    <Compile Include="Decision\StationSelection\SelectionOfFirstStation.cs" />
+    <Compile Include="Decision\SupermarketControllerAlgorithm.cs" />
+    <Compile Include="Decision\SupermarketController\MixedSupermarketConfiguration.cs" />
+    <Compile Include="FLOWObject.cs" />
+    <Compile Include="IO\FileInput.cs" />
+    <Compile Include="IO\FileOutput.cs" />
+    <Compile Include="IO\Input.cs" />
+    <Compile Include="IO\NetworkInput.cs" />
+    <Compile Include="IO\NetworkManager.cs" />
+    <Compile Include="IO\NetworkOutput.cs" />
+    <Compile Include="IO\Output.cs" />
+    <Compile Include="IO\TextOutput.cs" />
+    <Compile Include="Layout\BufferCell.cs" />
+    <Compile Include="Layout\Cell.cs" />
+    <Compile Include="Layout\DistanceMatrix.cs" />
+    <Compile Include="Layout\StationLoading.cs" />
+    <Compile Include="Layout\Lane.cs" />
+    <Compile Include="Layout\Layout.cs" />
+    <Compile Include="Layout\BinMagazine.cs" />
+    <Compile Include="Layout\MagazineLoading.cs" />
+    <Compile Include="Layout\Node.cs" />
+    <Compile Include="Layout\Operation.cs" />
+    <Compile Include="Layout\Station.cs" />
+    <Compile Include="Layout\Processor.cs" />
+    <Compile Include="Layout\Queue.cs" />
+    <Compile Include="Layout\Bin.cs" />
+    <Compile Include="Layout\BinLoading.cs" />
+    <Compile Include="Layout\ComponentType.cs" />
+    <Compile Include="Layout\Storage.cs" />
+    <Compile Include="Layout\Supermarket.cs" />
+    <Compile Include="Layout\Transporter.cs" />
+    <Compile Include="Layout\Warehouse.cs" />
+    <Compile Include="MovableObject.cs" />
+    <Compile Include="Operational\AlgorithmCollection.cs" />
+    <Compile Include="Operational\AlgorithmParameter.cs" />
+    <Compile Include="Operational\BatchRun.cs" />
+    <Compile Include="Operational\ConfigurationParameter.cs" />
+    <Compile Include="Operational\EventCalendar.cs" />
+    <Compile Include="Operational\Events\ArrivalEvent.cs" />
+    <Compile Include="Operational\Events\BypassEvent.cs" />
+    <Compile Include="Operational\Events\DepartureEvent.cs" />
+    <Compile Include="Operational\Events\EndLoadEvent.cs" />
+    <Compile Include="Operational\Events\EndLoadUnloadEvent.cs" />
+    <Compile Include="Operational\Events\EndPickEvent.cs" />
+    <Compile Include="Operational\Events\EndPlanningPeriodEvent.cs" />
+    <Compile Include="Operational\Events\EndProcessEvent.cs" />
+    <Compile Include="Operational\Events\EndSimulationEvent.cs" />
+    <Compile Include="Operational\Events\EndUnloadEvent.cs" />
+    <Compile Include="Operational\Events\EndWarmupEvent.cs" />
+    <Compile Include="Operational\Events\EnterQueueEvent.cs" />
+    <Compile Include="Operational\Events\Event.cs" />
+    <Compile Include="Operational\Events\JobTypeFinishEvent.cs" />
+    <Compile Include="Operational\Events\ProcessorBreakdownEvent.cs" />
+    <Compile Include="Operational\Events\ProcessorRepairEvent.cs" />
+    <Compile Include="Operational\Events\SeizeNodeEvent.cs" />
+    <Compile Include="Operational\Events\StartPlanningPeriodEvent.cs" />
+    <Compile Include="Operational\Events\StartProcessEvent.cs" />
+    <Compile Include="Operational\Job.cs" />
+    <Compile Include="Operational\JobManager.cs" />
+    <Compile Include="Operational\JobMix.cs" />
+    <Compile Include="Operational\JobRoute.cs" />
+    <Compile Include="Operational\JobType.cs" />
+    <Compile Include="Operational\LayoutManager.cs" />
+    <Compile Include="Operational\MonitoringParameter.cs" />
+    <Compile Include="Operational\SimulationManager.cs" />
+    <Compile Include="Operational\SimulationParameter.cs" />
+    <Compile Include="Operational\Unitload.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Random\ExponentialRVGenerator.cs" />
+    <Compile Include="Random\FileRVGenerator.cs" />
+    <Compile Include="Random\FixedRVGenerator.cs" />
+    <Compile Include="Random\LogNormalRVGenerator.cs" />
+    <Compile Include="Random\NormalRVGenerator.cs" />
+    <Compile Include="Random\RngStream.cs" />
+    <Compile Include="Random\RVGenerator.cs" />
+    <Compile Include="Random\StreamRVGenerator.cs" />
+    <Compile Include="Random\TriangularRVGenerator.cs" />
+    <Compile Include="Random\UniformRVGenerator.cs" />
+    <Compile Include="Random\WeibullRVGenerator.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="SQParameter.cs" />
+    <Compile Include="StaticObject.cs" />
+    <Compile Include="Statistics.cs" />
+    <Compile Include="TransferTask.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

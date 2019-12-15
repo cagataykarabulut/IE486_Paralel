@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<JobMix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>flow_jobmix</Name>
+  <EstimatedTime>0</EstimatedTime>
+  <JobTypes>
+    <JobType>
+      <Name>JobTypeA</Name>
+      <Alternates>
+        <JobRoute>
+          <Name>JobTypeA-Alternate1</Name>
+          <OperationNames>
+			<OperationName>OperationRecA</OperationName>
+            <OperationName>Operation1A</OperationName>
+            <OperationName>Operation2A</OperationName>
+			<OperationName>OperationShA</OperationName>
+          </OperationNames>
+        </JobRoute>
+      </Alternates>
+      <Arrival xsi:type="FixedRVGenerator">
+        <Value>600</Value>
+      </Arrival>
+      <Batch xsi:type="FixedRVGenerator">
+        <Value>100</Value>
+      </Batch>
+      <DueDateTightness xsi:type="FixedRVGenerator">
+        <Value>1.5</Value>
+      </DueDateTightness>
+      <InputCellName>Receiving</InputCellName>
+      <OutputCellName>Shipping</OutputCellName>
+    </JobType>
+  </JobTypes>
+</JobMix>
