@@ -96,6 +96,27 @@ namespace FLOW.NET.Layout
             set { this.route = value; }
         }
 
+        [XmlIgnore()]
+        public bool OnRoad
+        {
+            get { return this.onRoad; }
+            set { this.onRoad = value; }
+        }
+
+        [XmlIgnore()]
+        public List<TransferTask> AssignedTask
+        {
+            get { return this.assignedTask; }
+            set { this.assignedTask = value; }
+        }
+
+        [XmlIgnore()]
+        public Supermarket AssignedStorage
+        {
+            get { return this.assignedStorage; }
+            set { this.assignedStorage = value; }
+        }
+
         //Fall19
 
 
@@ -150,6 +171,35 @@ namespace FLOW.NET.Layout
             Statistics busy= this.Statistics["Busy"];
             busy.UpdateWeighted(timeIn, this.content.Count);
         }
+
+
+        //Fall 19
+        public bool isReadyAtDock()
+        {
+            if(this.InTransfer==false & this.assignedStorage.Node == this.Location) { return true; }
+            else { return false; }
+        }
+
+        public void CreateRoute()
+        {
+
+        }
+
+        public double calculateTransferTime()
+        {
+            return 5;
+        }
+        public double calculateTravelTime()
+        {
+            return 5;
+        }
+
+        public double AvailableCapacity()
+        {
+            return (content.Count - this.capacity);
+        }
+        //Fall 19
+
 
     }
 }
