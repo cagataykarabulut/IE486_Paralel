@@ -43,12 +43,19 @@ namespace Wrapper
             //3-Modify the algorithms as you desire 
             parameters.Algorithms.PartSequencingForProcessorAlgorithm = "FirstComeMustGo";
             parameters.Algorithms.StationControllerAlgorithm = "MixedProcessorConfiguration";
-            parameters.Algorithms.OrderControllerAlgorithm = ""; // eklenecek
+            parameters.Algorithms.OrderControllerAlgorithm = "ByPassWarehouse";//Fall 19
             parameters.Algorithms.OrderReleaseAlgorithm = "CyclicalImmediate";
             parameters.Algorithms.StationSelectionAlgorithm = "SelectionOfFirstStation";
             parameters.Algorithms.PullAlgorithm = "FirstBlockedFirstServed";
             parameters.Algorithms.PushAlgorithm = "AlwaysPush";
             parameters.Algorithms.ProcessorSelectionAlgorithm = "NonDelaySPT";
+           
+            //Fall 19
+            parameters.Algorithms.SupermarketControllerAlgorithm = "ControlSupermarket";
+            parameters.Algorithms.PickingAlgorithm = "";
+            parameters.Algorithms.BatchingAlgorithm = "";
+            parameters.Algorithms.MatchingAlgorithm = "";
+            //Fall19
 
 
             parameters.Configuration.JobArrivalType = JobArrivalType.TraceBased;
@@ -97,7 +104,7 @@ namespace Wrapper
             writer.WriteLine(String.Format("<OperationSelection>{0}</OperationSelection>", algorithms.OperationSelectionAlgorithm));
             writer.WriteLine(String.Format("<OrderRelease>{0}</OrderRelease>", algorithms.OrderReleaseAlgorithm));
             writer.WriteLine(String.Format("<StationController>{0}</StationController>", algorithms.StationControllerAlgorithm));
-            writer.WriteLine(String.Format("<ReplenishmentController>{0}</ReplenishmentController>", algorithms.ReplenishmentControllerAlgorithm));
+            writer.WriteLine(String.Format("<OrderController>{0}</OrderController>", algorithms.OrderControllerAlgorithm));
             writer.WriteLine(String.Format("<PartSequencingForProcessor>{0}</PartSequencingForProcessor>", algorithms.PartSequencingForProcessorAlgorithm));
             //writer.WriteLine(String.Format("<PartSequencingForOutQueue>{0}</PartSequencingForOutQueue>", algorithms.PartSequencingForOutQueueAlgorithm));
             #endregion
